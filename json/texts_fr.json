@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "games": "Jeux",
+    "learn": "Apprendre"
+  },
+  "tabs": {
+    "flagGame": "Jeu des Drapeaux",
+    "mapGame": "Carte du Monde",
+    "deptGame": "Jeu des Départements",
+    "deptMapGame": "Carte des Départements",
+    "regionGame": "Jeu des Régions"
+  },
+  "buttons": {
+    "play": "Jouer",
+    "replay": "Rejouer",
+    "countries": "Pays",
+    "capitals": "Capitales",
+    "easy": "Facile",
+    "hard": "Difficile",
+    "deptName": "Nom",
+    "deptNumber": "Numéro",
+    "allFrance": "Toute la France",
+    "choices": "choix"
+  },
+  "controls": {
+    "difficulty": "Difficulte",
+    "mode": "Mode",
+    "zone": "Zone",
+    "answers": "Reponses"
+  },
+  "zones": {
+    "Monde": "Monde",
+    "Afrique": "Afrique",
+    "Amérique du Nord": "Amérique du Nord",
+    "Amérique du Sud": "Amérique du Sud",
+    "Asie": "Asie",
+    "Europe": "Europe",
+    "Océanie": "Océanie"
+  },
+  "flagGame": {
+    "findFlag": "Trouvez le drapeau de : ",
+    "findFlagCapital": "Trouvez le drapeau dont la capitale est : "
+  },
+  "mapGame": {
+    "clickOn": "Cliquez sur : ",
+    "clickOnCapital": "Cliquez sur le pays ayant pour capitale : "
+  },
+  "deptGame": {
+    "whatName": "Quel est le nom du département ",
+    "whatNumber": "Quel est le numéro du département "
+  },
+  "deptMapGame": {
+    "clickOnDeptName": "Cliquez sur : ",
+    "clickOnDeptNumber": "Cliquez sur le département "
+  },
+  "regionGame": {
+    "whichRegion": "Dans quelle région se trouve "
+  },
+  "score": "Score",
+  "sommaire": {
+    "title": "Sommaire",
+    "continents": "Continents",
+    "world": "Monde",
+    "regionsFR": "Régions de France",
+    "departmentsFR": "Départements de France",
+    "flags": "Drapeaux pays"
+  },
+  "learn": {
+    "mapContinents": "Carte des continents",
+    "mapWorld": "Carte du monde",
+    "mapRegions": "Carte des régions de France",
+    "mapDepartments": "Carte des départements de France",
+    "flagsTitle": "Drapeaux pays",
+    "searchPlaceholder": "Rechercher un pays (ex: Roumanie)"
+  }
+}

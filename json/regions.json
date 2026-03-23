@@ -1,0 +1,17 @@
+{
+  "regions": [
+    { "id": "FR-AO", "nom": "Grand Est" },
+    { "id": "FR-AC", "nom": "Nouvelle-Aquitaine" },
+    { "id": "FR-AR", "nom": "Auvergne-Rhône-Alpes" },
+    { "id": "FR-BF", "nom": "Bourgogne-Franche-Comté" },
+    { "id": "FR-BT", "nom": "Bretagne" },
+    { "id": "FR-CN", "nom": "Centre-Val de Loire" },
+    { "id": "FR-CE", "nom": "Corse" },
+    { "id": "FR-IF", "nom": "Île-de-France" },
+    { "id": "FR-LP", "nom": "Occitanie" },
+    { "id": "FR-NC", "nom": "Hauts-de-France" },
+    { "id": "FR-ND", "nom": "Normandie" },
+    { "id": "FR-PL", "nom": "Pays de la Loire" },
+    { "id": "FR-PR", "nom": "Provence-Alpes-Côte d'Azur" }
+  ]
+}

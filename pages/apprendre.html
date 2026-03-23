@@ -2,6 +2,7 @@
 <html lang="fr">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/globe-modified.png">
     <title> GeoGames </title> 
     <link rel="stylesheet" href="../css/styleTW.css"> 
@@ -9,70 +10,74 @@
   <body>
     <header class="navbar">
       <div class="flex-1">
-        <a href="../index.html" style="margin-left:3%; width:8vh;height:8vh;"><img src="../img/globe-modified.png" alt="ImageGlobe"></a>
-        <a href="../index.html" style="margin-left:1%;color: black; font-size: 24px; font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-weight:bold;">GeoGames</a>
+        <a href="../index.html"><img src="../img/globe-modified.png" alt="Globe"></a>
+        <a href="../index.html" class="logo-text">GeoGames</a>
       </div>
       <div class="flex-none">
-        <ul class="menu menu-horizontal px-1" >
-          <li><a class="titre_header" href="apprendre.html"> Apprendre </a></li>
-          <li><a class="titre_header" href="about.html"> À propos </a></li>
-          <li>
-            <details  style="min-width: 130px; width: 100%; margin-right: 1vw;">
-              <summary style="display: flex; justify-content: center; align-items: center;">
-                <p class="titre_header" id="compte"> Compte </p>
-              </summary>
-              <ul style="min-width: 130px; width: 100%; background-color:  rgba(132, 181, 201, 1); outline: solid black;">
-                <li><a class="titre_header" id="signIn" href="signIn.html" style="margin-left: auto; margin-right: auto;"> Connexion </a></li>
-                <li><a class="titre_header" id="register" href="register.html" style="margin-left: auto; margin-right: auto;"> S'inscrire </a></li>
-                <li><p class="titre_header" id="logout" style="display:none; margin-left: auto; margin-right: auto;"> Quitter </p></li>
-              </ul>
-            </details>
-          </li>
+        <ul class="menu menu-horizontal px-1">
+          <li><a class="titre_header" href="../index.html" data-i18n="nav.games"> Jeux </a></li>
+          <li><a class="titre_header active" href="apprendre.html" data-i18n="nav.learn"> Apprendre </a></li>
         </ul>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="fr" title="Français">
+            <img src="../flags/fr.png" alt="FR">
+          </button>
+          <button class="lang-btn" data-lang="en" title="English">
+            <img src="../flags/gb.png" alt="EN">
+          </button>
+        </div>
       </div>
     </header>
-    <!-- Sommaire -->
-    <div style="padding-left:1vw; padding-top: 12vh; position: fixed; left: 0; top: 0; height: 100%;">
-      <h2 style="font-size:4vh; color:black; font-weight:bold" class="flexCenter">Sommaire</h2>
-      <ul style="font-size:3vh; padding-top: 2vh; color:black">
-        <li><a href="#carte-continents">1. Continents</a></li>
-        <li><a href="#carte-monde">2. Monde</a></li>
-        <li><a href="#carte-regions-france">3. Régions de France</a></li>
-        <li><a href="#carte-departements-france">4. Départements de France</a></li>
-        <li><a href="#recherche-drapeaux">5. Drapeaux pays</a></li>
+    <div class="sommaire">
+      <h2 data-i18n="sommaire.title">Sommaire</h2>
+      <ul>
+        <li><a href="#recherche-drapeaux" data-i18n="sommaire.flags">1. Drapeaux pays</a></li>
+        <li><a href="#carte-continents" data-i18n="sommaire.continents">2. Continents</a></li>
+        <li><a href="#carte-monde" data-i18n="sommaire.world">3. Monde</a></li>
+        <li><a href="#carte-regions-france" data-i18n="sommaire.regionsFR">4. Régions de France</a></li>
+        <li><a href="#carte-departements-france" data-i18n="sommaire.departmentsFR">5. Départements de France</a></li>
       </ul>
     </div>
-    <!-- Sommaire -->
-    <!-- Apprendre --> 
-    <!-- 1. Carte continents -->
-    <div id="carte-continents" style="height: 4vh;"></div>
-    <h1 class="titre_principal">Carte des continents</h1>
-    <object type="image/svg+xml" data="../img/map_continents.svg" class="map" width="1100"></object>
-    
-    <!-- 2. Carte monde -->
-    <div id="carte-monde"></div>
-    <h1 class="titre_principal">Carte du monde</h1>
-    <object type="image/svg+xml" data="../img/map_world.svg" class="map"></object>
-    
-    <!-- 3. Carte régions -->
-    <div id="carte-regions-france"></div>
-    <h1 class="titre_principal">Carte des régions de France</h1>
-    <object type="image/svg+xml" data="../img/map_FR_reg.svg" class="map"></object>
-    
-    <!-- 4. Carte départements -->
-    <div id="carte-departements-france"></div>
-    <h1 class="titre_principal">Carte des départements de France</h1>
-    <object type="image/svg+xml" data="../img/map_FR_dep.svg" class="map"></object>
-    
-    <!-- 5. Drapeaux pays -->
-    <div id="recherche-drapeaux"></div>
-    <h1 class="titre_principal" style="margin-bottom: 6vh;">Drapeaux pays</h1>
-    <input type="text" id="search" style="margin:auto; width:300px;" class="flexCenter border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Rechercher un pays (ex: Roumanie)" required="">
-    <ul id="country-list" style="display: flex; flex-direction: column; align-items:baseline; padding: 0;margin: auto; width:300px;"></ul>
-    <div class="content" style="padding-top: 8vh; position: relative; margin-left: auto; margin-right: auto; width:67vh; height:67vh;">
-      <img id="flagSugg" src="" style="width:100%; max-height: 50vh;  object-fit: contain;">
+    <div id="recherche-drapeaux" style="height: 4vh;"></div>
+    <h1 class="titre_principal" style="margin-bottom: 4vh;" data-i18n="learn.flagsTitle">Drapeaux pays</h1>
+    <div style="margin-bottom: 2vh;"></div>
+    <input type="text" id="search" class="search-input" placeholder="Rechercher un pays (ex: Roumanie)" data-i18n-placeholder="learn.searchPlaceholder" required="">
+    <ul id="country-list" style="display: flex; flex-direction: column; align-items: stretch; padding: 0; margin: 0.5rem auto 0; width:320px;"></ul>
+    <div class="flag-display" id="learn-flag-display">
+      <img id="flagSugg" src="" alt="">
     </div>
-    <!-- Apprendre -->
-    <script src="../js/script.js"></script>
+
+    <div id="carte-continents" style="height: 4vh;"></div>
+    <h1 class="titre_principal" data-i18n="learn.mapContinents">Carte des continents</h1>
+    <object type="image/svg+xml" data="../img/map_continents.svg" class="map" width="1100">
+      Votre navigateur ne peut pas afficher la carte des continents.
+    </object>
+    
+    <div id="carte-monde"></div>
+    <h1 class="titre_principal" data-i18n="learn.mapWorld">Carte du monde</h1>
+    <object type="image/svg+xml" data="../img/map_world.svg" class="map">
+      Votre navigateur ne peut pas afficher la carte du monde.
+    </object>
+    
+    <div id="carte-regions-france"></div>
+    <h1 class="titre_principal" data-i18n="learn.mapRegions">Carte des régions de France</h1>
+    <object type="image/svg+xml" data="../img/map_FR_reg.svg" class="map">
+      Votre navigateur ne peut pas afficher la carte des regions de France.
+    </object>
+    
+    <div id="carte-departements-france"></div>
+    <h1 class="titre_principal" data-i18n="learn.mapDepartments">Carte des départements de France</h1>
+    <object type="image/svg+xml" data="../img/map_FR_dep.svg" class="map">
+      Votre navigateur ne peut pas afficher la carte des departements de France.
+    </object>
+    <div style="height: 3vh;"></div>
+    <script src="../json/local_bundle.js"></script>
+    <script src="../json/learn_maps_bundle.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/learnMaps.js"></script>
+    <script src="../js/utils.js"></script>
+    <script src="../js/zoomPan.js"></script>
+    <script src="../js/controls.js"></script>
+    <script src="../js/init.js"></script>
   </body>
 </html>

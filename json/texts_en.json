@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "games": "Games",
+    "learn": "Learn"
+  },
+  "tabs": {
+    "flagGame": "Flag Game",
+    "mapGame": "World Map",
+    "deptGame": "Departments Game",
+    "deptMapGame": "Department Map",
+    "regionGame": "Regions Game"
+  },
+  "buttons": {
+    "play": "Play",
+    "replay": "Replay",
+    "countries": "Countries",
+    "capitals": "Capitals",
+    "easy": "Easy",
+    "hard": "Hard",
+    "deptName": "Name",
+    "deptNumber": "Number",
+    "allFrance": "All of France",
+    "choices": "choices"
+  },
+  "controls": {
+    "difficulty": "Difficulty",
+    "mode": "Mode",
+    "zone": "Zone",
+    "answers": "Answers"
+  },
+  "zones": {
+    "Monde": "World",
+    "Afrique": "Africa",
+    "Amérique du Nord": "North America",
+    "Amérique du Sud": "South America",
+    "Asie": "Asia",
+    "Europe": "Europe",
+    "Océanie": "Oceania"
+  },
+  "flagGame": {
+    "findFlag": "Find the flag of: ",
+    "findFlagCapital": "Find the flag whose capital is: "
+  },
+  "mapGame": {
+    "clickOn": "Click on: ",
+    "clickOnCapital": "Click on the country whose capital is: "
+  },
+  "deptGame": {
+    "whatName": "What is the name of department ",
+    "whatNumber": "What is the number of department "
+  },
+  "deptMapGame": {
+    "clickOnDeptName": "Click on: ",
+    "clickOnDeptNumber": "Click on department "
+  },
+  "regionGame": {
+    "whichRegion": "In which region is "
+  },
+  "score": "Score",
+  "sommaire": {
+    "title": "Contents",
+    "continents": "Continents",
+    "world": "World",
+    "regionsFR": "Regions of France",
+    "departmentsFR": "Departments of France",
+    "flags": "Country flags"
+  },
+  "learn": {
+    "mapContinents": "Map of continents",
+    "mapWorld": "World map",
+    "mapRegions": "Map of France's regions",
+    "mapDepartments": "Map of France's departments",
+    "flagsTitle": "Country flags",
+    "searchPlaceholder": "Search for a country (e.g.: Romania)"
+  }
+}

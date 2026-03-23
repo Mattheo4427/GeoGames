@@ -5,11 +5,6 @@ module.exports = {
   content: [
     '../index.html',
     'pages/apprendre.html',
-    'pages/about.html',
-    'pages/signIn.html',
-    'pages/register.html',
-    'pages/user.html',
-    'pages/delete.html',
     "./node_modules/flowbite/**/*.js"
   ],
   darkMode: 'class',

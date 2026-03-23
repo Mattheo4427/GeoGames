@@ -1,41 +1,43 @@
-# GeoGames Local
+# GeoGames
 
-GeoGames Local is an interactive geography learning platform that makes exploring the world fun and educational while running entirely on your local machine.
+GeoGames is an interactive geography learning platform that makes exploring the world fun and educational.
+
+## Game Modes
+
+- Flag quiz
+- World map quiz
+- French departments quiz
+- French departments map quiz
+- French regions quiz
 
 ## Features
 
-- Interactive maps and geography quizzes
-- Offline play with no internet connection required
-- Customizable difficulty levels
-- Track your learning progress over time
-- Multiple game modes including capitals, flags, landmarks, and more
-- Educational content suitable for all ages
+- French and English interface
+- Zone filters (world and continents)
+- Multiple answer counts (2, 4, 8 depending on mode)
+- Easy/Hard difficulty on map games
+- Immediate score feedback
 
-## Installation
+### Feature Preview
 
-No installation required! Simply:
+| Flag Game | World Map Game |
+| --- | --- |
+| ![Flag Game](img/flag_game.png) | ![World Map Game](img/world_map_game.png) |
 
-1. Download or clone this repository to your local machine
-2. Open `index.html` in any modern web browser (Chrome, Firefox, Edge, etc.)
-3. Start learning and playing immediately
+| Departments Game | Department Map Game |
+| --- | --- |
+| ![Departments Game](img/department_game.png) | ![Department Map Game](img/department_map_game.png) |
 
-## How to Play
+| Regions Game | Learn - World Map |
+| --- | --- |
+| ![Regions Game](img/regions_game.png) | ![Learn World Map](img/world_map_learn.png) |
 
-1. Launch the application by opening `index.html`
-2. From the main menu, select your preferred game mode
-3. Choose difficulty settings as desired
-4. Test your geography knowledge and track your progress
+## Run Locally
 
-## Technical Requirements
-
-- Any modern web browser
-- JavaScript enabled
-- No internet connection needed after initial download
-
-## About
-
-This is a standalone adaptation of a web-based geography educational project developed during my third year of software engineering school. This version allows users to enjoy all features locally without requiring an internet connection or server setup.
+1. Clone or download this repository.
+2. Open `index.html` in a modern browser.
+3. Play directly, no build step required.
 
 ## License
 
-Personal project - All rights reserved
+Personal project - all rights reserved.
