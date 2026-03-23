@@ -85,10 +85,15 @@ async function mapGame() {
 
     function handleClick(event) {
       paths.forEach(p => p.removeEventListener('click', handleClick));
+      paths.forEach(p => p.removeEventListener('touchend', handleClick));
       paths.forEach(p => {
         p.onmouseenter = null;
         p.onmouseleave = null;
       });
+
+      if (event.type === 'touchend') {
+        event.preventDefault();
+      }
 
       let element = event.target;
       let id;
@@ -109,6 +114,7 @@ async function mapGame() {
       if (overlay) overlay.remove();
 
       if (correctCode === id.toLowerCase()) {
+        if (typeof playSuccessSound === 'function') playSuccessSound();
         element.style.fill = 'green';
         element.style.strokeWidth = '1px';
         element.style.stroke = 'rgb(5, 94, 27)';
@@ -123,6 +129,7 @@ async function mapGame() {
 
     paths.forEach(path => {
       path.addEventListener('click', handleClick);
+      path.addEventListener('touchend', handleClick, { passive: false });
 
       if (path.getAttribute('id').toLowerCase() === correctCode) {
         const overlay = document.createElement('div');
@@ -141,6 +148,7 @@ async function mapGame() {
         overlay.style.cursor = 'crosshair';
         overlay.dataset.pathId = path.getAttribute('id');
         overlay.addEventListener('click', handleClick);
+        overlay.addEventListener('touchend', handleClick, { passive: false });
 
         path.ownerSVGElement.parentNode.appendChild(overlay);
       }
@@ -152,6 +160,8 @@ async function mapGame() {
 
 /** Handle end of map game round (wrong answer) */
 function endMapGame(bad, answer) {
+  if (typeof playErrorSound === 'function') playErrorSound();
+
   const svg = document.querySelector('#svg-container svg');
   const paths = svg.querySelectorAll('path');
   const badCode = String(bad || '').toLowerCase();

@@ -62,10 +62,12 @@ async function regionGame() {
         answered = true;
 
         if (region.id === correctRegion.id) {
+          if (typeof playSuccessSound === 'function') playSuccessSound();
           btn.classList.add('correct');
           scoreRegionGame++;
           setTimeout(regionGame, 800);
         } else {
+          if (typeof playErrorSound === 'function') playErrorSound();
           btn.classList.add('wrong');
           answersContainer.querySelectorAll('.quiz-answer-btn').forEach(b => {
             if (b.getAttribute('data-region-id') === correctRegion.id) {

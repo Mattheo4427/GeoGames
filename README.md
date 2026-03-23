@@ -1,6 +1,6 @@
-# GeoGames
+# GeoStreak
 
-GeoGames is an interactive geography learning platform that makes exploring the world fun and educational.
+GeoStreak is an interactive geography learning platform that makes exploring the world fun and educational.
 
 ## Game Modes
 
