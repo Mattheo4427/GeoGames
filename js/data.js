@@ -7,7 +7,7 @@ let scoreRegionGame = 0;
 let departements = [];
 let regions = [];
 
-let currentLang = localStorage.getItem('lang') || 'fr';
+let currentLang = localStorage.getItem('lang') || 'en';
 let texts = {};
 
 let countries = [];
@@ -30,6 +30,25 @@ const ZONE_MAP = {
 };
 
 const jsonBase = globalThis.location.pathname.includes('/pages/') ? '../json/' : 'json/';
+
+function setMetaContent(id, content) {
+  const el = document.getElementById(id);
+  if (el && typeof content === 'string' && content.trim() !== '') {
+    el.setAttribute('content', content);
+  }
+}
+
+function applySeoMeta() {
+  if (!texts?.seo) return;
+
+  if (texts.seo.title) {
+    document.title = texts.seo.title;
+  }
+
+  setMetaContent('meta-description', texts.seo.description);
+  setMetaContent('meta-og-title', texts.seo.ogTitle || texts.seo.title);
+  setMetaContent('meta-og-description', texts.seo.ogDescription || texts.seo.description);
+}
 
 function clonePlain(obj) {
   if (typeof structuredClone === 'function') {
@@ -168,6 +187,8 @@ async function loadRegions() {
 function applyTexts() {
   const resolveTextPath = key => key?.split('.').reduce((o, k) => o?.[k], texts);
 
+  document.documentElement.lang = currentLang;
+
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     const val = resolveTextPath(key);
@@ -194,6 +215,8 @@ function applyTexts() {
   if (typeof applyLearnMapTitles === 'function') {
     applyLearnMapTitles();
   }
+
+  applySeoMeta();
 }
 
 /** Switch language, reload data + texts, update UI */

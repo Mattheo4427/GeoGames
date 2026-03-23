@@ -1,4 +1,38 @@
 {
+  "brand": {
+    "name": "GeoStreak",
+    "heroTitle": "GeoStreak - Geography Quiz & Map Games",
+    "heroTagline": "Learn geography by playing fun quizzes and map games",
+    "heroIntro": "Choose a game mode and start learning geography",
+    "heroCta": "Play"
+  },
+  "seo": {
+    "title": "GeoStreak - Free Geography Games | Maps, Flags & Country Quiz",
+    "description": "Play GeoStreak, a free geography platform with map games, flag quizzes and country challenges. Learn and test your geography skills.",
+    "ogTitle": "GeoStreak - Free Geography Games | Maps, Flags & Country Quiz",
+    "ogDescription": "Play GeoStreak, a free geography platform with map games, flag quizzes and country challenges. Learn and test your geography skills."
+  },
+  "home": {
+    "modesTitle": "Game Modes",
+    "modeFlagTitle": "Flag Quiz",
+    "modeFlagDesc": "Identify countries through their flags and improve your memory with a fast-paced flag quiz.",
+    "modeFlagKeywords": "Keywords: geography quiz, flag quiz, country flags",
+    "modeMapTitle": "Map Quiz",
+    "modeMapDesc": "Click the right country on the world map and train your map-reading skills in interactive rounds.",
+    "modeMapKeywords": "Keywords: map quiz, geography game, world map game",
+    "modeDeptTitle": "French Departments",
+    "modeDeptDesc": "Practice French departments with names and numbers, from easy rounds to harder regional challenges.",
+    "modeDeptKeywords": "Keywords: France geography, departments quiz, French map game",
+    "modeRegionTitle": "Regions",
+    "modeRegionDesc": "Match departments to the right French region and strengthen your understanding of France.",
+    "modeRegionKeywords": "Keywords: regions quiz, France regions, geography learning",
+    "aboutTitle": "What is GeoStreak?",
+    "aboutText": "GeoStreak is a geography learning platform designed for students, travelers, and quiz lovers. It combines multiple geography game formats in one place so you can practice countries, maps, flags, and French territories in a simple, fast interface.",
+    "gamesTitle": "What geography games can you play?",
+    "gamesText": "You can play a flag quiz, a map quiz, French departments challenges, and regions exercises. Each geography game uses short rounds, clear prompts, and instant feedback to help you learn by doing.",
+    "whyTitle": "Why use GeoStreak?",
+    "whyText": "GeoStreak makes geography practice more interactive than flashcards. You improve location recall, recognize flags faster, and build confidence through regular play with clean visuals and multilingual support."
+  },
   "nav": {
     "games": "Games",
     "learn": "Learn"

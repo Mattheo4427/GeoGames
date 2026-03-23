@@ -1,4 +1,38 @@
 {
+  "brand": {
+    "name": "GeoStreak",
+    "heroTitle": "GeoStreak - Jeux de geographie et quiz",
+    "heroTagline": "Apprends la geographie avec des quiz et des jeux interactifs",
+    "heroIntro": "Choisis un mode de jeu et commence a apprendre la geographie",
+    "heroCta": "Jouer"
+  },
+  "seo": {
+    "title": "GeoStreak - Jeux de geographie gratuits | Cartes, drapeaux et quiz",
+    "description": "GeoStreak est une plateforme gratuite de jeux de geographie avec quiz, cartes et drapeaux. Apprends et teste tes connaissances.",
+    "ogTitle": "GeoStreak - Jeux de geographie gratuits | Cartes, drapeaux et quiz",
+    "ogDescription": "GeoStreak est une plateforme gratuite de jeux de geographie avec quiz, cartes et drapeaux. Apprends et teste tes connaissances."
+  },
+  "home": {
+    "modesTitle": "Modes de jeu",
+    "modeFlagTitle": "Quiz drapeaux",
+    "modeFlagDesc": "Identifie les pays grace a leurs drapeaux et entraine ta memoire avec un quiz drapeaux dynamique.",
+    "modeFlagKeywords": "Mots-cles: jeu de geographie, quiz drapeaux, drapeaux du monde",
+    "modeMapTitle": "Quiz carte",
+    "modeMapDesc": "Clique sur le bon pays sur la carte du monde et progresse avec des manches interactives.",
+    "modeMapKeywords": "Mots-cles: quiz carte, map quiz, geography game",
+    "modeDeptTitle": "Departements francais",
+    "modeDeptDesc": "Travaille les departements francais avec les noms et numeros, en mode national ou regional.",
+    "modeDeptKeywords": "Mots-cles: jeu de geographie, quiz departements, France",
+    "modeRegionTitle": "Regions",
+    "modeRegionDesc": "Associe chaque departement a la bonne region et renforce ta connaissance du territoire francais.",
+    "modeRegionKeywords": "Mots-cles: quiz regions, geographie France, apprentissage interactif",
+    "aboutTitle": "Qu'est-ce que GeoStreak ?",
+    "aboutText": "GeoStreak est une plateforme de geographie qui reunit plusieurs formats de quiz dans une interface simple et rapide. Tu peux apprendre les pays, les cartes, les drapeaux et les territoires francais en jouant.",
+    "gamesTitle": "Quels jeux de geographie sont disponibles ?",
+    "gamesText": "Tu peux jouer a un quiz drapeaux, un quiz carte, un mode departements et un mode regions. Chaque jeu de geographie propose des questions courtes, un retour immediat et une progression naturelle.",
+    "whyTitle": "Pourquoi utiliser GeoStreak ?",
+    "whyText": "GeoStreak rend l'apprentissage plus motivant qu'une revision classique. Tu memorises mieux les localisations, reconnais plus vite les drapeaux et avances a ton rythme grace a une experience interactive."
+  },
   "nav": {
     "games": "Jeux",
     "learn": "Apprendre"

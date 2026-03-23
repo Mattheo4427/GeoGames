@@ -21,7 +21,10 @@ function getDeptMapPool() {
 
 function clearDeptMapListeners() {
   if (deptMapState.paths.length > 0 && deptMapState.clickHandler) {
-    deptMapState.paths.forEach(path => path.removeEventListener('click', deptMapState.clickHandler));
+    deptMapState.paths.forEach(path => {
+      path.removeEventListener('click', deptMapState.clickHandler);
+      path.removeEventListener('touchend', deptMapState.clickHandler);
+    });
   }
   deptMapState.paths = [];
   deptMapState.clickHandler = null;
@@ -283,6 +286,8 @@ function sanitizeSvgTitle(value) {
 }
 
 function endDeptMapGame(clickedPath, correctPath) {
+  if (typeof playErrorSound === 'function') playErrorSound();
+
   if (clickedPath) {
     clickedPath.style.fill = '#dc2626';
     clickedPath.style.stroke = '#7f1d1d';
@@ -411,6 +416,10 @@ async function deptMapGame() {
     }
 
     const onClick = (event) => {
+      if (event.type === 'touchend') {
+        event.preventDefault();
+      }
+
       clearDeptMapListeners();
       paths.forEach(path => {
         path.onmouseenter = null;
@@ -421,6 +430,7 @@ async function deptMapGame() {
       const clickedId = normalizeDeptId(clickedPath.getAttribute('id'));
 
       if (clickedId === correctId) {
+        if (typeof playSuccessSound === 'function') playSuccessSound();
         clickedPath.style.fill = '#16a34a';
         clickedPath.style.stroke = '#14532d';
         clickedPath.style.strokeWidth = '1px';
@@ -436,7 +446,10 @@ async function deptMapGame() {
 
     deptMapState.paths = paths;
     deptMapState.clickHandler = onClick;
-    paths.forEach(path => path.addEventListener('click', onClick));
+    paths.forEach(path => {
+      path.addEventListener('click', onClick);
+      path.addEventListener('touchend', onClick, { passive: false });
+    });
   } catch (error) {
     console.error('deptMapGame error:', error);
     const fallbackText = currentLang === 'en'

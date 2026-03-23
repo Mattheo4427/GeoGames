@@ -80,10 +80,12 @@ async function deptGame() {
         answered = true;
 
         if (dept.id === correctDept.id) {
+          if (typeof playSuccessSound === 'function') playSuccessSound();
           btn.classList.add('correct');
           scoreDeptGame++;
           setTimeout(deptGame, 800);
         } else {
+          if (typeof playErrorSound === 'function') playErrorSound();
           btn.classList.add('wrong');
           answersContainer.querySelectorAll('.quiz-answer-btn').forEach(b => {
             if (b.getAttribute('data-dept-id') === correctDept.id) {

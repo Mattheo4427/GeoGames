@@ -52,6 +52,38 @@ if (isIndexPage) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const brandLinks = Array.from(document.querySelectorAll('.navbar .flex-1 a[href$="index.html"]'));
+  const brandContainer = document.querySelector('.navbar .flex-1');
+
+  brandLinks.forEach(link => {
+    link.addEventListener('click', (event) => {
+      // Preserve native browser behaviors like opening in a new tab/window.
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey ||
+        link.target === '_blank'
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      if (brandContainer) {
+        brandContainer.classList.remove('brand-click-animate');
+        globalThis.setTimeout(() => {
+          brandContainer.classList.add('brand-click-animate');
+        }, 0);
+      }
+
+      globalThis.setTimeout(() => {
+        globalThis.location.href = link.getAttribute('href') || 'index.html';
+      }, 220);
+    });
+  });
+
   const dropdowns = [
     { optionClass: '.mapOptionFlagGame', titleId: 'zoneFlag', detailsId: 'zoneFlagGame' },
     { optionClass: '.mapOptionMapGame', titleId: 'zoneMap', detailsId: 'zoneMapGame' }
@@ -115,6 +147,20 @@ document.addEventListener('DOMContentLoaded', () => {
         choicesDeptTitle.innerHTML = option.innerHTML;
         choicesDeptTitle.setAttribute('data-choices', option.getAttribute('data-choices'));
         choicesDeptDetails.removeAttribute('open');
+      });
+    });
+  }
+
+  const flagChoicesOptions = document.querySelectorAll('.flagChoicesOption');
+  const choicesFlagTitle = document.getElementById('choicesFlag');
+  const choicesFlagDetails = document.getElementById('choicesFlagGame');
+  if (choicesFlagTitle && choicesFlagDetails) {
+    flagChoicesOptions.forEach(option => {
+      option.addEventListener('click', (e) => {
+        e.preventDefault();
+        choicesFlagTitle.innerHTML = option.innerHTML;
+        choicesFlagTitle.dataset.choices = option.dataset.choices || '4';
+        choicesFlagDetails.removeAttribute('open');
       });
     });
   }
